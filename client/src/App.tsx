@@ -1,33 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="todo-wrapper">
+  <div className="card">
+    <h1 className="todo-title">Danh sách công việc</h1>
+
+    <div className="toolbar">
+      <input className="input" placeholder="Lọc công việc theo cấp độ" />
+      <button className="btn btn-primary">Thêm</button>
+    </div>
+
+    <div className="todo-list">
+      <div className="todo-item">
+        <input type="checkbox" className="checkbox" />
+        <div className="todo-content">
+          <span className="todo-text">Xây dựng thành Header</span>
+          <span className="badge badge-urgent">Khẩn cấp</span>
+        </div>
+        <div className="actions">
+          <button className="btn btn-outline">Sửa</button>
+          <button className="btn btn-danger-soft">Xóa</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div className="todo-item">
+        <input type="checkbox" className="checkbox" />
+        <div className="todo-content">
+          <span className="todo-text">Xây dựng thành Menu</span>
+          <span className="badge badge-important">Quan trọng</span>
+        </div>
+        <div className="actions">
+          <button className="btn btn-outline">Sửa</button>
+          <button className="btn btn-danger-soft">Xóa</button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+    </div>
+
+    <div className="todo-footer">
+      <div className="counter">Số công việc hoàn thành: <strong>10</strong></div>
+      <div className="actions">
+        <button className="btn btn-primary">Hoàn thành tất cả</button>
+        <button className="btn btn-danger-soft">Xóa tất cả</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </>
   )
 }

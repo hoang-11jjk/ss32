@@ -1,0 +1,28 @@
+{
+    "ToDoList":[
+        {
+            "id": 1,
+            "name": "Học ReactJS",
+            "status": true,
+            "lever": "normal"
+        },
+        {
+            "id": 2,
+            "name": "Học TypeScript",
+            "status": false,
+            "lever": "medium"
+        },
+        {
+            "id": 3,
+            "name": "Học Redux",
+            "status": true,
+            "lever": "hard"
+        },
+        {
+            "id": 4,
+            "name": "Học NodeJS",
+            "status": false,
+            "lever": "not_important"
+        }
+    ]
+}
